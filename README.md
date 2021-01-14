@@ -1,4 +1,4 @@
-# SBA Kubernetes Two-Container Cluster
+# SBA Kubernetes Cluster
 * **Objective** - Clone and modify this repository locally to ensure that Jenkins can successfully build this project.
 * **Purpose** - To demonstrate container orchestration skillset
 
