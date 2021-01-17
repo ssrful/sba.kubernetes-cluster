@@ -4,4 +4,4 @@ COPY . .
 Run apt-get -y update
 RUN pip install -r requirements.txt
 EXPOSE 8070
-CMD ["python", "/.web.py"]
+CMD ["python", "web.py"]
