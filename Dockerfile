@@ -1,7 +1,7 @@
-FROM python:3.7-alpine
-RUN mkdir /flask_app
+FROM python:3
 WORKDIR /flask_app
-ADD ./flask_app
+COPY . .
+Run apt-get -y update
 RUN pip install -r requirements.txt
 EXPOSE 8070
 CMD ["python", "/.web.py"]
