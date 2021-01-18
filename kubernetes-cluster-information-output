@@ -1,0 +1,296 @@
+Name:                     hello-minikube
+Namespace:                default
+Labels:                   app=hello-minikube
+Annotations:              <none>
+Selector:                 app=hello-minikube
+Type:                     NodePort
+IP Families:              <none>
+IP:                       10.107.189.199
+IPs:                      <none>
+Port:                     <unset>  8080/TCP
+TargetPort:               8080/TCP
+NodePort:                 <unset>  32534/TCP
+Endpoints:                172.17.0.3:8080
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>
+
+
+Name:              kubernetes
+Namespace:         default
+Labels:            component=apiserver
+                   provider=kubernetes
+Annotations:       <none>
+Selector:          <none>
+Type:              ClusterIP
+IP Families:       <none>
+IP:                10.96.0.1
+IPs:               <none>
+Port:              https  443/TCP
+TargetPort:        8443/TCP
+Endpoints:         192.168.49.2:8443
+Session Affinity:  None
+Events:            <none>
+Name:         hello-minikube-6ddfcc9757-4vwcr
+Namespace:    default
+Priority:     0
+Node:         minikube/192.168.49.2
+Start Time:   Mon, 11 Jan 2021 16:23:37 -0500
+Labels:       app=hello-minikube
+              pod-template-hash=6ddfcc9757
+Annotations:  <none>
+Status:       Running
+IP:           172.17.0.3
+IPs:
+  IP:           172.17.0.3
+Controlled By:  ReplicaSet/hello-minikube-6ddfcc9757
+Containers:
+  echoserver:
+    Container ID:   docker://b3a3c12b18b6d2410f3968615dd70fc46f721747952a3cdd6ed2dbaa5584c399
+    Image:          k8s.gcr.io/echoserver:1.4
+    Image ID:       docker-pullable://k8s.gcr.io/echoserver@sha256:5d99aa1120524c801bc8c1a7077e8f5ec122ba16b6dda1a5d3826057f67b9bcb
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Sun, 17 Jan 2021 18:50:17 -0500
+    Last State:     Terminated
+      Reason:       Error
+      Exit Code:    255
+      Started:      Mon, 11 Jan 2021 16:24:01 -0500
+      Finished:     Sun, 17 Jan 2021 18:49:56 -0500
+    Ready:          True
+    Restart Count:  1
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-mhrjf (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  default-token-mhrjf:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-mhrjf
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:          <none>
+
+
+Name:         sba-kubernetes-58b846788c-42hss
+Namespace:    default
+Priority:     0
+Node:         minikube/192.168.49.2
+Start Time:   Sun, 17 Jan 2021 18:50:52 -0500
+Labels:       app=flask
+              pod-template-hash=58b846788c
+Annotations:  <none>
+Status:       Running
+IP:           172.17.0.4
+IPs:
+  IP:           172.17.0.4
+Controlled By:  ReplicaSet/sba-kubernetes-58b846788c
+Containers:
+  sba-kubernetes:
+    Container ID:   docker://f629335443f2065623985513fcafe30cb675ce03639cfa589f1b9506106b9aca
+    Image:          ssrful/sba-kubernetes
+    Image ID:       docker-pullable://ssrful/sba-kubernetes@sha256:4abd4df192f0ba954c5edb2c84e9661a5f5e5ab6b783fbcbc54c7a7c5684d1a4
+    Port:           8070/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Sun, 17 Jan 2021 18:51:34 -0500
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-mhrjf (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  default-token-mhrjf:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-mhrjf
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:          <none>
+
+
+Name:         sba-kubernetes-58b846788c-44vnd
+Namespace:    default
+Priority:     0
+Node:         minikube/192.168.49.2
+Start Time:   Sun, 17 Jan 2021 18:50:52 -0500
+Labels:       app=flask
+              pod-template-hash=58b846788c
+Annotations:  <none>
+Status:       Running
+IP:           172.17.0.5
+IPs:
+  IP:           172.17.0.5
+Controlled By:  ReplicaSet/sba-kubernetes-58b846788c
+Containers:
+  sba-kubernetes:
+    Container ID:   docker://7d0384f3982747696e4d0ea9881bef557d15e879f46252110aa709081daa295b
+    Image:          ssrful/sba-kubernetes
+    Image ID:       docker-pullable://ssrful/sba-kubernetes@sha256:4abd4df192f0ba954c5edb2c84e9661a5f5e5ab6b783fbcbc54c7a7c5684d1a4
+    Port:           8070/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Sun, 17 Jan 2021 18:51:34 -0500
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-mhrjf (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  default-token-mhrjf:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-mhrjf
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:          <none>
+
+
+Name:         sba-kubernetes-58b846788c-mwzf7
+Namespace:    default
+Priority:     0
+Node:         minikube/192.168.49.2
+Start Time:   Sun, 17 Jan 2021 18:50:52 -0500
+Labels:       app=flask
+              pod-template-hash=58b846788c
+Annotations:  <none>
+Status:       Running
+IP:           172.17.0.6
+IPs:
+  IP:           172.17.0.6
+Controlled By:  ReplicaSet/sba-kubernetes-58b846788c
+Containers:
+  sba-kubernetes:
+    Container ID:   docker://9491b2e5e40cc638508f46ab43324d377e5e3b1574f292c0420e678c305be333
+    Image:          ssrful/sba-kubernetes
+    Image ID:       docker-pullable://ssrful/sba-kubernetes@sha256:4abd4df192f0ba954c5edb2c84e9661a5f5e5ab6b783fbcbc54c7a7c5684d1a4
+    Port:           8070/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Sun, 17 Jan 2021 18:51:34 -0500
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-mhrjf (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  default-token-mhrjf:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-mhrjf
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:          <none>
+Name:               minikube
+Roles:              master
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=minikube
+                    kubernetes.io/os=linux
+                    minikube.k8s.io/commit=23f40a012abb52eff365ff99a709501a61ac5876
+                    minikube.k8s.io/name=minikube
+                    minikube.k8s.io/updated_at=2021_01_11T16_23_14_0700
+                    minikube.k8s.io/version=v1.15.1
+                    node-role.kubernetes.io/master=
+Annotations:        kubeadm.alpha.kubernetes.io/cri-socket: /var/run/dockershim.sock
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Mon, 11 Jan 2021 16:23:10 -0500
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  minikube
+  AcquireTime:     <unset>
+  RenewTime:       Sun, 17 Jan 2021 20:07:18 -0500
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  MemoryPressure   False   Sun, 17 Jan 2021 20:07:11 -0500   Mon, 11 Jan 2021 21:55:23 -0500   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Sun, 17 Jan 2021 20:07:11 -0500   Mon, 11 Jan 2021 21:55:23 -0500   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Sun, 17 Jan 2021 20:07:11 -0500   Mon, 11 Jan 2021 21:55:23 -0500   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Sun, 17 Jan 2021 20:07:11 -0500   Mon, 11 Jan 2021 21:55:33 -0500   KubeletReady                 kubelet is posting ready status
+Addresses:
+  InternalIP:  192.168.49.2
+  Hostname:    minikube
+Capacity:
+  cpu:                8
+  ephemeral-storage:  263174212Ki
+  hugepages-2Mi:      0
+  memory:             12850540Ki
+  pods:               110
+Allocatable:
+  cpu:                8
+  ephemeral-storage:  263174212Ki
+  hugepages-2Mi:      0
+  memory:             12850540Ki
+  pods:               110
+System Info:
+  Machine ID:                 53822fb9cb0d43fcad2e2620f0a50ef1
+  System UUID:                53822fb9cb0d43fcad2e2620f0a50ef1
+  Boot ID:                    e1593327-f947-4584-995f-4ab5525fddf0
+  Kernel Version:             4.19.128-microsoft-standard
+  OS Image:                   Ubuntu 20.04.1 LTS
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  docker://19.3.13
+  Kubelet Version:            v1.19.4
+  Kube-Proxy Version:         v1.19.4
+Non-terminated Pods:          (13 in total)
+  Namespace                   Name                                         CPU Requests  CPU Limits  Memory Requests  Memory Limits  AGE
+  ---------                   ----                                         ------------  ----------  ---------------  -------------  ---
+  default                     hello-minikube-6ddfcc9757-4vwcr              0 (0%)        0 (0%)      0 (0%)           0 (0%)         6d3h
+  default                     sba-kubernetes-58b846788c-42hss              0 (0%)        0 (0%)      0 (0%)           0 (0%)         76m
+  default                     sba-kubernetes-58b846788c-44vnd              0 (0%)        0 (0%)      0 (0%)           0 (0%)         76m
+  default                     sba-kubernetes-58b846788c-mwzf7              0 (0%)        0 (0%)      0 (0%)           0 (0%)         76m
+  kube-system                 coredns-f9fd979d6-mvfbp                      100m (1%)     0 (0%)      70Mi (0%)        170Mi (1%)     6d3h
+  kube-system                 etcd-minikube                                0 (0%)        0 (0%)      0 (0%)           0 (0%)         6d3h
+  kube-system                 kube-apiserver-minikube                      250m (3%)     0 (0%)      0 (0%)           0 (0%)         6d3h
+  kube-system                 kube-controller-manager-minikube             200m (2%)     0 (0%)      0 (0%)           0 (0%)         6d3h
+  kube-system                 kube-proxy-6s4tk                             0 (0%)        0 (0%)      0 (0%)           0 (0%)         6d3h
+  kube-system                 kube-scheduler-minikube                      100m (1%)     0 (0%)      0 (0%)           0 (0%)         6d3h
+  kube-system                 storage-provisioner                          0 (0%)        0 (0%)      0 (0%)           0 (0%)         6d3h
+  kubernetes-dashboard        dashboard-metrics-scraper-c95fcf479-2bkrd    0 (0%)        0 (0%)      0 (0%)           0 (0%)         10m
+  kubernetes-dashboard        kubernetes-dashboard-584f46694c-pkz84        0 (0%)        0 (0%)      0 (0%)           0 (0%)         10m
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests   Limits
+  --------           --------   ------
+  cpu                650m (8%)  0 (0%)
+  memory             70Mi (0%)  170Mi (1%)
+  ephemeral-storage  0 (0%)     0 (0%)
+  hugepages-2Mi      0 (0%)     0 (0%)
+Events:              <none>

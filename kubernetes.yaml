@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sba-kubernetes
+spec:
+  selector:
+    matchLabels:
+      app: flask
+  replicas: 3 # This tells deployment to run 3 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: flask
+    spec:
+      containers:
+      - name: sba-kubernetes
+        image: ssrful/sba-kubernetes
+        ports:
+        - containerPort: 8070
+apiVersion: v1
+kind: Service
+metadata:
+  name: sba-kubernetes
+spec:
+  selector:
+    app: sba-kubernetes
+  ports:
+    - protocol: TCP
+        port: 8070
+        targetPort: 8070
+        nodePort: 31000
+  type: NodePort 
